@@ -1,19 +1,20 @@
 'use strict';
 
 angular.module('zenTasksApp')
-  .controller('GroupsCtrl', function ($scope, Group) {
-    $scope.groups = Group.all;
+  .controller('GroupsCtrl', function ($scope, $location, Groups) {
+    $scope.groups = Groups.all;
 
-    $scope.group = { title: "An Awesome Ogranizeion", description: "we build awesome stuff"};
+    $scope.group = { title: "An Awesome Ogranization", description: "we build awesome stuff"};
 
     $scope.submitGroup = function(){
-    	Group.create($scope.group).then(function(){
-    		$scope.group = { title: "An Awesome Ogranizeion", description: "we build awesome stuff"};
+    	Groups.create($scope.group).then(function(ref){
+    		$scope.group = { title: "An Awesome Ogranization", description: "we build awesome stuff"};
+    		$location.path('groups/' + ref.name());
     	});
     };
 
     $scope.deleteGroup = function(groupId){
-    	Group.delete(groupId);
+    	Groups.delete(groupId);
     };
 
   });

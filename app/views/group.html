@@ -1,0 +1,10 @@
+<div ng-repeat="(groupId, group) in groups">
+	<h2>{{ group.title }}</h2>
+	<a ng-href="#/groups/{{ groupId }}">View Group</a>
+	<a ng-click="deleteGroup(groupId)">delete Group</a>
+</div>
+<form ng-submit="submitGroup()">
+	<input type="text" ng-model="group.title"/>
+	<textarea ng-model="group.description" id="" cols="30" rows="10"></textarea>
+	<input type="submit" value="Create Group">
+</form>

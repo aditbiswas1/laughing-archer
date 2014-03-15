@@ -10,8 +10,12 @@ angular.module('zenTasksApp', [
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'views/group.html',
+        controller: 'GroupsCtrl'
+      })
+      .when('/groups/:groupId', {
+        templateUrl: 'views/groupview.html',
+        controller: 'GroupviewCtrl'
       })
       .otherwise({
         redirectTo: '/'
