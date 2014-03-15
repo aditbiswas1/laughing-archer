@@ -1,0 +1,44 @@
+Groups:{
+		"publichash": {
+				"users": {
+
+					},
+				"projects":{
+
+				}
+			},
+		"organization1hash":{
+
+		},
+		"organization2hash":{
+
+		},
+	},
+
+Users: {
+	"aditbiswas1": {
+		"md5_hash" : "some hash auto generated",
+		"organizations": {
+			"publichash" : "publichash",
+			"organization1hash" : "organization1hash"
+		},
+		"projects": {
+
+		}
+	},
+	"randomUser1": {
+		"md5_hash" : "some hash auto generated",
+		"organizations": {
+
+		},
+		"projects": {
+
+		}	
+	}
+}
+
+Projects: {
+	"Project 1":{
+
+	}
+}
