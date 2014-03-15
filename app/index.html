@@ -16,6 +16,7 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,app}) styles/main.css -->
+    <link href='http://fonts.googleapis.com/css?family=Gudea' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
@@ -25,8 +26,9 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
+    <div ng-include="'views/navbar.html'"></div>
     <div class="container" ng-view=""></div>
-
+    <div ng-include="'views/footer.html'"></div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -64,6 +66,7 @@
         <script src="scripts/services/Groups.js"></script>
         <script src="scripts/controllers/Groups.js"></script>
         <script src="scripts/controllers/GroupView.js"></script>
+        <script src="scripts/controllers/Nav.js"></script>
         <!-- endbuild -->
 </body>
 </html>
