@@ -2,7 +2,7 @@
 <div ng-repeat="(groupId, group) in groups">
 	<h2>{{ group.title }}</h2>
 	<a ng-href="#/groups/{{ groupId }}">View Group</a>
-	<a ng-click="deleteGroup(groupId)">delete Group</a>
+	<a ng-click="deleteGroup(groupId)" ng-show="signedIn() && group.owner === currentUser.username ">delete Group</a>
 </div>
 <form ng-submit="submitGroup()">
 	<input type="text" ng-model="group.title"/>

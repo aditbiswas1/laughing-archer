@@ -1,4 +1,11 @@
 <h1>{{ group.title }}</h1>
 <p>{{ group.description }}</p>
 
+<a ng-click="deleteGroup()" ng-show="signedIn() && group.owner === currentUser.username ">delete Group</a>
+<a ng-click="joinGroup()" ng-show="signedIn() && notInGroup() ">Join Group</a>
+<a ng-click="leaveGroup(currentUser.username)" ng-show="signedIn() && !(notInGroup()) ">Leave Group</a>
 <a href="/">Back to home</a>
+
+<ul>
+	<li ng-repeat="(memberID, member) in group.members">{{memberID + " " +  member }}</li>
+</ul>

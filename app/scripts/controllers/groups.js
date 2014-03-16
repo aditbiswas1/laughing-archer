@@ -7,14 +7,14 @@ angular.module('zenTasksApp')
     $scope.group = { title: "An Awesome Ogranization", description: "we build awesome stuff"};
 
     $scope.submitGroup = function(){
-    	Groups.create($scope.group).then(function(ref){
+    	Groups.create($scope.group).then(function(groupId){
     		$scope.group = { title: "An Awesome Ogranization", description: "we build awesome stuff"};
-    		$location.path('groups/' + ref.name());
+    		$location.path('groups/' + groupId);
     	});
     };
-
     $scope.deleteGroup = function(groupId){
-    	Groups.delete(groupId);
+        Groups.delete(groupId);
     };
+    
 
   });
