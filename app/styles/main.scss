@@ -29,6 +29,14 @@ body {
 .navbar-default .navbar-brand {
             color: #fff;
 }
+.nav-pic {
+  margin: -2px 5px 0 0;
+  max-height: 20px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+}
+
 
 .footer{
     height: 5px;
@@ -45,6 +53,9 @@ body {
         }
         .navbar-nav{
             padding-top: 15px;
+        }
+        .navbar-nav > li > span{
+            padding: 15px;
         }
     }
     .footer{
